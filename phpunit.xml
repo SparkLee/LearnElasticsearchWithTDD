@@ -11,7 +11,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="PHP TDD Test Suite">
+        <testsuite name="Elasticsearch Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
