@@ -1,6 +1,6 @@
-# 以 TDD 的方式学习 PHP 语言
+# 以 TDD 的方式学习 Elasticsearch
 
-[![Build Status](https://travis-ci.com/SparkLee/LearnPhpWithTDD.svg?branch=master)](https://travis-ci.com/SparkLee/LearnPhpWithTDD)
+[![Build Status](https://travis-ci.com/SparkLee/LearnElasticsearchWithTDD.svg?branch=master)](https://travis-ci.com/SparkLee/LearnPhpWithTDD)
 
 #### 下载安装 Composer 依赖包
 > 前置条件：本机已经配置好 composer 命令
@@ -17,10 +17,3 @@ composer install
 ```shell script
 phpunit
 ```
-
-#### 扩展资料
-- [PHPUnit 中文网](http://www.phpunit.cn/)
-- [Martin Fowler - Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
-- [熊恒 - TDD（测试驱动开发）示范姿势](https://www.jianshu.com/p/a5766176c493)
-- [熊节 - 练功房脚手架](https://github.com/gigix/dojo-scaffold)
-- [PHP Manual](https://www.php.net/manual/en/)
