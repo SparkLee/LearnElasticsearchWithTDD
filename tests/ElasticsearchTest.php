@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Dotenv\Dotenv;
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
 
@@ -18,7 +19,14 @@ class ElasticsearchTest extends TestCase
     public function __construct()
     {
         parent::__construct();
+
+        $this->loadEnv();
         $this->client = $this->buildEsClient();
+    }
+
+    protected function loadEnv(): void
+    {
+        Dotenv::createImmutable(dirname(__DIR__))->load();
     }
 
     /**
@@ -27,7 +35,7 @@ class ElasticsearchTest extends TestCase
     protected function buildEsClient(): Client
     {
         return ClientBuilder::create()
-            ->setHosts(['http://114.116.105.109:9200'])
+            ->setHosts([getenv('ES_HOST')])
             ->build();
     }
 
