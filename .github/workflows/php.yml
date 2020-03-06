@@ -1,0 +1,17 @@
+name: PHP CI
+on: [push]
+jobs:
+  RunTestSuite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: See php version
+        run: php -v
+      - name: See composer version
+        run: composer --version
+      - name: See phpunit version
+        run: phpunit --version
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+      - name: Run test suite
+        run: composer run-script test

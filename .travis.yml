@@ -1,0 +1,6 @@
+# Building a PHP project: https://docs.travis-ci.com/user/languages/php/
+language: php
+php:
+  - 7.2
+install: composer install --prefer-dist --no-progress --no-suggest
+script: composer test
